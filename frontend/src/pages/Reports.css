@@ -1,0 +1,36 @@
+.reports-page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.report-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+.rkpi { padding: 1.5rem; }
+.rkpi-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+.rkpi-value { font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 700; }
+
+.rkpi-expense .rkpi-value { color: var(--danger); }
+.rkpi-income .rkpi-value  { color: var(--success); }
+.rkpi-profit .rkpi-value  { color: var(--success); }
+.rkpi-loss .rkpi-value    { color: var(--danger); }
+
+.report-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 1rem; }
+.report-grid h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
+
+.cat-breakdown { display: flex; flex-direction: column; gap: 8px; margin-top: 0.75rem; }
+.cat-row { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+.cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.cat-count { color: var(--muted); font-size: 0.78rem; margin-left: auto; }
+.cat-amt { font-weight: 600; color: var(--text); min-width: 70px; text-align: right; }
+
+.no-data { color: var(--muted); font-size: 0.88rem; text-align: center; padding: 2rem 0; }
+.loading-state { text-align: center; padding: 3rem; color: var(--muted); }
+
+.expenses-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.expenses-table th { text-align: left; padding: 0.5rem 0.75rem; color: var(--muted); font-size: 0.73rem; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+.expenses-table td { padding: 0.75rem; border-bottom: 1px solid rgba(200,216,236,0.5); color: var(--text); }
+.expenses-table tr:last-child td { border-bottom: none; }
+.muted-text { color: var(--muted); }
+.amt-expense { color: var(--danger); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .report-kpis { grid-template-columns: 1fr; }
+  .report-grid { grid-template-columns: 1fr; }
+}
